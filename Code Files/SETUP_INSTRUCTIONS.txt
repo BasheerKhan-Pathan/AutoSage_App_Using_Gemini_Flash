@@ -1,0 +1,84 @@
+================================================================================
+                    AutoSage - Setup Instructions
+================================================================================
+
+After extracting this ZIP file, follow these steps:
+
+STEP 1: INSTALL PYTHON
+-----------------------
+Make sure Python 3.8 or higher is installed on your system.
+Check by running: python --version
+If not installed, download from: https://www.python.org/downloads/
+
+STEP 2: OPEN TERMINAL/COMMAND PROMPT
+-------------------------------------
+Navigate to this folder:
+  Windows: cd C:\path\to\AutoSage
+  Mac/Linux: cd /path/to/AutoSage
+
+STEP 3: INSTALL REQUIREMENTS
+-----------------------------
+Run this command:
+  pip install -r requirements.txt
+
+If 'pip' doesn't work, try:
+  pip3 install -r requirements.txt
+  or
+  python -m pip install -r requirements.txt
+
+STEP 4: GET GOOGLE API KEY
+---------------------------
+1. Visit: https://ai.google.dev/gemini-api/docs/api-key
+2. Sign in with your Google account
+3. Click "Create API Key"
+4. Copy the generated key
+
+STEP 5: CONFIGURE API KEY
+--------------------------
+1. Find the file named ".env.example"
+2. Make a copy and rename it to ".env"
+3. Open ".env" with any text editor (Notepad, TextEdit, etc.)
+4. Replace "your_google_api_key_here" with your actual API key
+5. Save the file
+
+Example .env file content:
+  GOOGLE_API_KEY=AIzaSyDxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+STEP 6: RUN THE APPLICATION
+----------------------------
+In the terminal/command prompt, run:
+  streamlit run app.py
+
+The app will open in your browser automatically!
+If not, go to: http://localhost:8501
+
+STEP 7: START USING AUTOSAGE
+-----------------------------
+1. Click "Browse files" to upload a vehicle image
+2. Click "Analyze Vehicle" button
+3. Wait a few seconds for AI analysis
+4. View comprehensive vehicle information!
+
+================================================================================
+
+TROUBLESHOOTING:
+----------------
+- If streamlit command not found: python -m streamlit run app.py
+- If port 8501 is busy: streamlit run app.py --server.port 8502
+- If API errors occur: Check your .env file and API key
+- If installation fails: Make sure Python and pip are properly installed
+
+IMPORTANT NOTES:
+----------------
+- Never share your .env file or API key with anyone
+- Internet connection is required for the app to work
+- Use clear, high-quality vehicle images for best results
+- The app is free to use within Google's API limits
+
+For detailed documentation, see README.md
+
+Need help? Check QUICKSTART.md for a quick reference guide
+
+================================================================================
+                    Enjoy using AutoSage! 🚗
+================================================================================
